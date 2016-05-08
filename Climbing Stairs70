@@ -1,0 +1,16 @@
+/*
+ * 递归
+ *leetcode70:Climbing Stairs
+ * 爬楼梯，共n级，每次上1或2级，问到顶有多少种方法
+ */
+//我的方法
+public class Solution {
+    public int climbStairs(int n) {
+    if(n==1||n==2){
+		return n;
+	}else{
+		int k=climbStairs(n-1)+climbStairs(n-2);
+		return k;
+	}    
+    }
+}
